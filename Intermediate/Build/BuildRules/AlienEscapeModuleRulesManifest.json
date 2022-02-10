@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"C:\\UnrealProjects\\AlienEscape\\Source\\AlienEscape\\AlienEscape.Build.cs",
+		"C:\\UnrealProjects\\AlienEscape\\Source\\AlienEscape.Target.cs",
+		"C:\\UnrealProjects\\AlienEscape\\Source\\AlienEscapeEditor.Target.cs"
+	],
+	"EngineVersion": "4.27.2"
+}

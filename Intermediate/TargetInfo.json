@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "AlienEscape",
+			"Path": "C:\\UnrealProjects\\AlienEscape\\Source\\AlienEscape.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "AlienEscapeEditor",
+			"Path": "C:\\UnrealProjects\\AlienEscape\\Source\\AlienEscapeEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

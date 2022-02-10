@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\AlienEscape.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{A4E2E05F-29CC-4BEF-94D4-FBF664046FEA}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\AlienEscape.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\AlienEscapeEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{9E2281F4-1EBD-4E61-BE9C-871963A44DA6}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\AlienEscape">
+      <UniqueIdentifier>{7C2285FD-0D4A-4DAE-BFD6-F9DEE1CEBE67}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\AlienEscape\AlienEscape.Build.cs">
+      <Filter>Source\AlienEscape</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\AlienEscape\AlienEscape.cpp">
+      <Filter>Source\AlienEscape</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\AlienEscape\AlienEscape.h">
+      <Filter>Source\AlienEscape</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\AlienEscape\AlienEscapeCharacter.cpp">
+      <Filter>Source\AlienEscape</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\AlienEscape\AlienEscapeCharacter.h">
+      <Filter>Source\AlienEscape</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\AlienEscape\AlienEscapeGameMode.cpp">
+      <Filter>Source\AlienEscape</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\AlienEscape\AlienEscapeGameMode.h">
+      <Filter>Source\AlienEscape</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

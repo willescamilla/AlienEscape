@@ -1,0 +1,2 @@
+C:\UnrealProjects\AlienEscape\Intermediate\Build\Win64\UE4Editor\Development\AlienEscape\Definitions.AlienEscape.h
+C:\UnrealProjects\AlienEscape\Source\AlienEscape\AlienEscape.h
