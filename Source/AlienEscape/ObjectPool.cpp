@@ -35,8 +35,8 @@ void UObjectPool::BeginPlay()
 		UWorld* const World = GetWorld();
 		if (World) {
 
-			// Fills half of the pool with platforms
-			for (int i = 0; i < PoolSize/2; i++) {
+			// For some reason this for loop is adding PoolSize*2!
+			for (int i = 0; i < PoolSize; i++) {
 				APoolableActor* PoolableActor = World->SpawnActor<AAlienEscapePlatform>(PooledActorSubclass, FVector().ZeroVector, FRotator().ZeroRotator);
 				PoolableActor->SetActive(false);
 				Pool.Add(PoolableActor);

@@ -17,6 +17,7 @@ public:
 
 	void SetActive(bool InActive);
 	bool IsActive();
+	void Deactivate();
 
 
 protected:
@@ -24,7 +25,6 @@ protected:
 	virtual void BeginPlay() override;
 
 	bool bIsActive;
-	void Deactivate();
 
 public:	
 	// Called every frame

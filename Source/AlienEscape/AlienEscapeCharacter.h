@@ -23,11 +23,11 @@ class AAlienEscapeCharacter : public APaperCharacter
 
 	/** Side view camera */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
-	class UCameraComponent *SideViewCameraComponent;
+		class UCameraComponent *SideViewCameraComponent;
 
 	/** Camera boom positioning the camera beside the character */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
-	class USpringArmComponent *CameraBoom;
+		class USpringArmComponent *CameraBoom;
 
 	UTextRenderComponent *TextComponent;
 	virtual void Tick(float DeltaSeconds) override;
@@ -35,11 +35,11 @@ class AAlienEscapeCharacter : public APaperCharacter
 protected:
 	// The animation to play while running around
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
-	class UPaperFlipbook *RunningAnimation;
+		class UPaperFlipbook *RunningAnimation;
 
 	// The animation to play while idle (standing still)
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
-	class UPaperFlipbook *IdleAnimation;
+		class UPaperFlipbook *IdleAnimation;
 
 	/* Updates the animation and rotation of character*/
 	void UpdateCharacter();

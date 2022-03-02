@@ -50,9 +50,9 @@ AAlienEscapeCharacter::AAlienEscapeCharacter()
 
 	// Configure character movement
 	GetCharacterMovement()->GravityScale = 10.0;
-	GetCharacterMovement()->AirControl = 0.80f;
+	GetCharacterMovement()->AirControl = 0.0f;
 	GetCharacterMovement()->JumpZVelocity = 10.f;
-	GetCharacterMovement()->GroundFriction = 1.0f;
+	GetCharacterMovement()->GroundFriction = 0.0f;
 	GetCharacterMovement()->MaxWalkSpeed = 600.0f;
 	GetCharacterMovement()->MaxFlySpeed = 600.0f;
 	// Lock character motion onto the XZ plane, so the character can't move in or out of the screen

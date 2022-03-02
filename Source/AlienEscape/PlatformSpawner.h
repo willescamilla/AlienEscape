@@ -40,6 +40,10 @@ protected:
 	UPROPERTY(Category = "Spawner", EditAnywhere)
 		float InitialSpawnDelay = 4.0f;
 
+	// Number that RandRange must be higher than in order to spawn platforms
+	UPROPERTY(Category = "Spawner", EditAnywhere)
+		int32 ChanceToSpawn = 2.0f;
+
 	FTimerHandle SpawnTimerHandle;
 
 };

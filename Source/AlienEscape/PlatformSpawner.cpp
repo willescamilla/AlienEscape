@@ -4,6 +4,7 @@
 #include "PlatformSpawner.h"
 #include "Components/BoxComponent.h"
 #include "TimerManager.h"
+#include "Math/UnrealMathUtility.h"
 
 // Sets default values
 APlatformSpawner::APlatformSpawner()
@@ -25,14 +26,16 @@ void APlatformSpawner::BeginPlay()
 
 void APlatformSpawner::SpawnActor()
 {
-	APoolableActor* PoolableActor = ObjectPooler->GetPooledActor();
-	if (PoolableActor == nullptr) {
-		UE_LOG(LogTemp, Warning, TEXT("Cannot Spawn Platform"));
-	}
+	if (FMath::RandRange(0, 10) > ChanceToSpawn) {
+		APoolableActor* PoolableActor = ObjectPooler->GetPooledActor();
+		if (PoolableActor == nullptr) {
+			UE_LOG(LogTemp, Warning, TEXT("Cannot Spawn Platform"));
+		}
 
-	PoolableActor->SetActorLocation(GetActorLocation());
-	PoolableActor->SetActorRotation(GetActorRotation());
-	PoolableActor->SetActive(true);
-	UE_LOG(LogTemp, Warning, TEXT("Spawning Platform"));
+		PoolableActor->SetActorLocation(GetActorLocation());
+		PoolableActor->SetActorRotation(GetActorRotation());
+		PoolableActor->SetActive(true);
+		UE_LOG(LogTemp, Warning, TEXT("Spawning Platform"));
+	}
 }
 

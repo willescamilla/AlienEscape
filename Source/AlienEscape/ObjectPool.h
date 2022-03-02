@@ -32,7 +32,7 @@ public:
 		TSubclassOf<class APoolableActor> PooledActorSubclass;
 
 	UPROPERTY(EditAnywhere, Category = "ObjectPooler")
-		int PoolSize = 100;
+		int PoolSize = 50;
 
 	TArray<APoolableActor*> Pool;
 };
