@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\AlienEscape.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{A4E2E05F-29CC-4BEF-94D4-FBF664046FEA}</UniqueIdentifier>
+      <UniqueIdentifier>{C220D4D5-9516-46AA-BD2B-EFC4630998F3}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\AlienEscape.Target.cs">
       <Filter>Source</Filter>
@@ -11,8 +11,10 @@
     <None Include="..\..\Source\AlienEscapeEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.gitattributes" />
+    <None Include="..\..\.gitignore" />
     <Filter Include="Config">
-      <UniqueIdentifier>{9E2281F4-1EBD-4E61-BE9C-871963A44DA6}</UniqueIdentifier>
+      <UniqueIdentifier>{8B75AB36-CABA-4706-8687-0501023A65FC}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -30,7 +32,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\AlienEscape">
-      <UniqueIdentifier>{7C2285FD-0D4A-4DAE-BFD6-F9DEE1CEBE67}</UniqueIdentifier>
+      <UniqueIdentifier>{C265BA19-AE9A-4362-B04F-651A0342BFA0}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\AlienEscape\AlienEscape.Build.cs">
       <Filter>Source\AlienEscape</Filter>
@@ -51,6 +53,12 @@
       <Filter>Source\AlienEscape</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\AlienEscape\AlienEscapeGameMode.h">
+      <Filter>Source\AlienEscape</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\AlienEscape\AlienEscapePlatform.cpp">
+      <Filter>Source\AlienEscape</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\AlienEscape\AlienEscapePlatform.h">
       <Filter>Source\AlienEscape</Filter>
     </ClInclude>
   </ItemGroup>

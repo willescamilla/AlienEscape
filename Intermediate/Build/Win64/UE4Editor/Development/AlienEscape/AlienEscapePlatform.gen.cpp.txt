@@ -1,0 +1,5 @@
+C:\UnrealProjects\AlienEscape\Intermediate\Build\Win64\UE4Editor\Development\AlienEscape\Definitions.AlienEscape.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
+C:\UnrealProjects\AlienEscape\Source\AlienEscape/AlienEscapePlatform.h
+C:\UnrealProjects\AlienEscape\Intermediate\Build\Win64\UE4Editor\Inc\AlienEscape\AlienEscapePlatform.generated.h

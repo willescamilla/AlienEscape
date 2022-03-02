@@ -49,10 +49,9 @@ AAlienEscapeCharacter::AAlienEscapeCharacter()
 	GetCharacterMovement()->bOrientRotationToMovement = false;
 
 	// Configure character movement
-	GetCharacterMovement()->GravityScale = 2.0;
-	GetCharacterMovement()->DefaultLandMovementMode = MOVE_Falling;
+	GetCharacterMovement()->GravityScale = 10.0;
 	GetCharacterMovement()->AirControl = 0.80f;
-	GetCharacterMovement()->JumpZVelocity = 1000.f;
+	GetCharacterMovement()->JumpZVelocity = 10.f;
 	GetCharacterMovement()->GroundFriction = 1.0f;
 	GetCharacterMovement()->MaxWalkSpeed = 600.0f;
 	GetCharacterMovement()->MaxFlySpeed = 600.0f;
@@ -95,7 +94,7 @@ void AAlienEscapeCharacter::UpdateAnimation()
 void AAlienEscapeCharacter::Tick(float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
-	AddMovementInput(FVector(1.0f, 0.0f, 0.0f), 0.1);
+	AddMovementInput(FVector(1.0f, 0.0f, 0.0f), 0.5);
 	UpdateCharacter();	
 }
 
@@ -129,9 +128,13 @@ void AAlienEscapeCharacter::MoveRight(float Value)
 
 void AAlienEscapeCharacter::FlipGravity()
 {
-	UE_LOG(LogTemp, Warning, TEXT("%f"), GetCharacterMovement()->GravityScale);
+	//UE_LOG(LogTemp, Warning, TEXT("%f"), GetCharacterMovement()->GravityScale);
 	GetCharacterMovement()->GravityScale *= -1.0f;
-	UE_LOG(LogTemp, Warning, TEXT("GravityFlipped"));
+	Jump();
+	FRotator NewRotation = GetActorRotation();
+	NewRotation.Roll += 180;
+	SetActorRotation(NewRotation);
+	//UE_LOG(LogTemp, Warning, TEXT("GravityFlipped"));
 	UE_LOG(LogTemp, Warning, TEXT("%f"), GetCharacterMovement()->GravityScale);
 }
 
