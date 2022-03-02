@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\AlienEscape.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{C220D4D5-9516-46AA-BD2B-EFC4630998F3}</UniqueIdentifier>
+      <UniqueIdentifier>{C15F61DD-4D72-42CA-A699-8C560DAC652B}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\AlienEscape.Target.cs">
       <Filter>Source</Filter>
@@ -13,8 +13,9 @@
     </None>
     <None Include="..\..\.gitattributes" />
     <None Include="..\..\.gitignore" />
+    <None Include="..\..\AlienEscape.code-workspace" />
     <Filter Include="Config">
-      <UniqueIdentifier>{8B75AB36-CABA-4706-8687-0501023A65FC}</UniqueIdentifier>
+      <UniqueIdentifier>{2F40BFB1-B387-41CC-B7C3-51B0998F1C4A}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -32,7 +33,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\AlienEscape">
-      <UniqueIdentifier>{C265BA19-AE9A-4362-B04F-651A0342BFA0}</UniqueIdentifier>
+      <UniqueIdentifier>{FC1FCE5C-1A40-4BD8-9545-650A1BB2BD6E}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\AlienEscape\AlienEscape.Build.cs">
       <Filter>Source\AlienEscape</Filter>
@@ -59,6 +60,24 @@
       <Filter>Source\AlienEscape</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\AlienEscape\AlienEscapePlatform.h">
+      <Filter>Source\AlienEscape</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\AlienEscape\ObjectPool.cpp">
+      <Filter>Source\AlienEscape</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\AlienEscape\ObjectPool.h">
+      <Filter>Source\AlienEscape</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\AlienEscape\PlatformSpawner.cpp">
+      <Filter>Source\AlienEscape</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\AlienEscape\PlatformSpawner.h">
+      <Filter>Source\AlienEscape</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\AlienEscape\PoolableActor.cpp">
+      <Filter>Source\AlienEscape</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\AlienEscape\PoolableActor.h">
       <Filter>Source\AlienEscape</Filter>
     </ClInclude>
   </ItemGroup>

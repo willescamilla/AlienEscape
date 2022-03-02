@@ -75,9 +75,39 @@ AAlienEscapeCharacter::AAlienEscapeCharacter()
 	bReplicates = true;
 }
 
+void AAlienEscapeCharacter::Tick(float DeltaSeconds)
+{
+	Super::Tick(DeltaSeconds);
+	AddMovementInput(FVector(1.0f, 0.0f, 0.0f), 0.5);
+	UpdateCharacter();
+}
+
 //////////////////////////////////////////////////////////////////////////
 // Animation
 
+void AAlienEscapeCharacter::UpdateCharacter()
+{
+	// Update animation to match the motion
+	UpdateAnimation();
+
+	// Now setup the rotation of the controller based on the direction we are travelling
+	const FVector PlayerVelocity = GetVelocity();
+	float TravelDirection = PlayerVelocity.X;
+	// Set the rotation so that the character faces his direction of travel.
+	if (Controller != nullptr)
+	{
+		if (TravelDirection < 0.0f)
+		{
+			Controller->SetControlRotation(FRotator(0.0, 180.0f, 0.0f));
+		}
+		else if (TravelDirection > 0.0f)
+		{
+			Controller->SetControlRotation(FRotator(0.0f, 0.0f, 0.0f));
+		}
+	}
+}
+
+//  Currently the character is always running
 void AAlienEscapeCharacter::UpdateAnimation()
 {
 	const FVector PlayerVelocity = GetVelocity();
@@ -89,13 +119,6 @@ void AAlienEscapeCharacter::UpdateAnimation()
 	{
 		GetSprite()->SetFlipbook(DesiredAnimation);
 	}
-}
-
-void AAlienEscapeCharacter::Tick(float DeltaSeconds)
-{
-	Super::Tick(DeltaSeconds);
-	AddMovementInput(FVector(1.0f, 0.0f, 0.0f), 0.5);
-	UpdateCharacter();	
 }
 
 
@@ -128,14 +151,13 @@ void AAlienEscapeCharacter::MoveRight(float Value)
 
 void AAlienEscapeCharacter::FlipGravity()
 {
-	//UE_LOG(LogTemp, Warning, TEXT("%f"), GetCharacterMovement()->GravityScale);
 	GetCharacterMovement()->GravityScale *= -1.0f;
 	Jump();
 	FRotator NewRotation = GetActorRotation();
 	NewRotation.Roll += 180;
 	SetActorRotation(NewRotation);
 	//UE_LOG(LogTemp, Warning, TEXT("GravityFlipped"));
-	UE_LOG(LogTemp, Warning, TEXT("%f"), GetCharacterMovement()->GravityScale);
+	//UE_LOG(LogTemp, Warning, TEXT("%f"), GetCharacterMovement()->GravityScale);
 }
 
 void AAlienEscapeCharacter::SlideStart()
@@ -172,26 +194,4 @@ void AAlienEscapeCharacter::TouchStopped(const ETouchIndex::Type FingerIndex, co
 {
 	// Cease jumping once touch stopped
 	StopJumping();
-}
-
-void AAlienEscapeCharacter::UpdateCharacter()
-{
-	// Update animation to match the motion
-	UpdateAnimation();
-
-	// Now setup the rotation of the controller based on the direction we are travelling
-	const FVector PlayerVelocity = GetVelocity();
-	float TravelDirection = PlayerVelocity.X;
-	// Set the rotation so that the character faces his direction of travel.
-	if (Controller != nullptr)
-	{
-		if (TravelDirection < 0.0f)
-		{
-			Controller->SetControlRotation(FRotator(0.0, 180.0f, 0.0f));
-		}
-		else if (TravelDirection > 0.0f)
-		{
-			Controller->SetControlRotation(FRotator(0.0f, 0.0f, 0.0f));
-		}
-	}
 }

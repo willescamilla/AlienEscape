@@ -1,0 +1,68 @@
+// Fill out your copyright notice in the Description page of Project Settings.
+
+
+#include "ObjectPool.h"
+#include "UObject/ConstructorHelpers.h"
+#include "GameFramework/Actor.h"
+#include "Engine.h"
+
+// Sets default values for this component's properties
+UObjectPool::UObjectPool()
+{
+	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
+	// off to improve performance if you don't need them.
+	PrimaryComponentTick.bCanEverTick = true;
+
+	// ...
+}
+
+
+APoolableActor* UObjectPool::GetPooledActor()
+{
+	for (APoolableActor* PoolableActor : Pool) {
+		if (!PoolableActor->IsActive()) {
+			return PoolableActor;
+		}
+	}
+	return nullptr;
+}
+
+// Called when the game starts
+void UObjectPool::BeginPlay()
+{
+	Super::BeginPlay();
+	if (PooledActorSubclass != NULL) {
+		UWorld* const World = GetWorld();
+		if (World) {
+
+			// Fills half of the pool with platforms
+			for (int i = 0; i < PoolSize/2; i++) {
+				APoolableActor* PoolableActor = World->SpawnActor<AAlienEscapePlatform>(PooledActorSubclass, FVector().ZeroVector, FRotator().ZeroRotator);
+				PoolableActor->SetActive(false);
+				Pool.Add(PoolableActor);
+				UE_LOG(LogTemp, Warning, TEXT("Added platform to the pool"));
+			}
+
+			// Would fill the rest of the pool with a different PoolableActor
+			/*
+			for (int i = 0; i < PoolSize / 2; i++) {
+				APoolableActor* PoolableActor = World->SpawnActor<**INSERT_OTHER_POOLABLE_ACTOR_HERE**>(PooledActorSubclass, FVector().ZeroVector, FRotator().ZeroRotator);
+				PoolableActor->SetActive(false);
+				Pool.Add(PoolableActor);
+				UE_LOG(LogTemp, Warning, TEXT("Added platform to the pool"));
+			} */
+		}
+	}
+	// ...
+	
+}
+
+
+// Called every frame
+void UObjectPool::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
+{
+	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
+
+	// ...
+}
+

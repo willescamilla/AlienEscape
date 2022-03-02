@@ -41,24 +41,11 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
 	class UPaperFlipbook *IdleAnimation;
 
-	/** Called to choose the correct animation to play based on the character's movement state */
-	void UpdateAnimation();
-
-	/** Handles player input */
-	void MoveRight(float Value);
-
-	void FlipGravity();
-
-	void SlideStart();
-
-	void SlideStop();
-
-	void UsePowerup();
-
-	void UseSpecialAbility();
-
 	/* Updates the animation and rotation of character*/
 	void UpdateCharacter();
+
+	/** Called to choose the correct animation to play based on the character's movement state (running or standing still) */
+	void UpdateAnimation();
 
 	/** Handle touch inputs. */
 	void TouchStarted(const ETouchIndex::Type FingerIndex, const FVector Location);
@@ -69,6 +56,16 @@ protected:
 	// APawn interface
 	virtual void SetupPlayerInputComponent(class UInputComponent *InputComponent) override;
 	// End of APawn interface
+
+
+	// Functions I made
+	/** Handles player input */
+	void MoveRight(float Value);
+	void FlipGravity();
+	void SlideStart();
+	void SlideStop();
+	void UsePowerup();
+	void UseSpecialAbility();
 
 public:
 	AAlienEscapeCharacter();

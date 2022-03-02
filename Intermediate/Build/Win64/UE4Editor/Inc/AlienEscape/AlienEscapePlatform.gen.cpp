@@ -15,7 +15,7 @@ void EmptyLinkFunctionForGeneratedCodeAlienEscapePlatform() {}
 // Cross Module References
 	ALIENESCAPE_API UClass* Z_Construct_UClass_AAlienEscapePlatform_NoRegister();
 	ALIENESCAPE_API UClass* Z_Construct_UClass_AAlienEscapePlatform();
-	ENGINE_API UClass* Z_Construct_UClass_AActor();
+	ALIENESCAPE_API UClass* Z_Construct_UClass_APoolableActor();
 	UPackage* Z_Construct_UPackage__Script_AlienEscape();
 // End Cross Module References
 	void AAlienEscapePlatform::StaticRegisterNativesAAlienEscapePlatform()
@@ -35,7 +35,7 @@ void EmptyLinkFunctionForGeneratedCodeAlienEscapePlatform() {}
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
 	UObject* (*const Z_Construct_UClass_AAlienEscapePlatform_Statics::DependentSingletons[])() = {
-		(UObject* (*)())Z_Construct_UClass_AActor,
+		(UObject* (*)())Z_Construct_UClass_APoolableActor,
 		(UObject* (*)())Z_Construct_UPackage__Script_AlienEscape,
 	};
 #if WITH_METADATA
@@ -71,7 +71,7 @@ void EmptyLinkFunctionForGeneratedCodeAlienEscapePlatform() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AAlienEscapePlatform, 360602498);
+	IMPLEMENT_CLASS(AAlienEscapePlatform, 663542943);
 	template<> ALIENESCAPE_API UClass* StaticClass<AAlienEscapePlatform>()
 	{
 		return AAlienEscapePlatform::StaticClass();

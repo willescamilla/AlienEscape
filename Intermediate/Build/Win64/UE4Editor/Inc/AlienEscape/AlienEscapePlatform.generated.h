@@ -13,28 +13,28 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define ALIENESCAPE_AlienEscapePlatform_generated_h
 
-#define AlienEscape_Source_AlienEscape_AlienEscapePlatform_h_12_SPARSE_DATA
-#define AlienEscape_Source_AlienEscape_AlienEscapePlatform_h_12_RPC_WRAPPERS
-#define AlienEscape_Source_AlienEscape_AlienEscapePlatform_h_12_RPC_WRAPPERS_NO_PURE_DECLS
-#define AlienEscape_Source_AlienEscape_AlienEscapePlatform_h_12_INCLASS_NO_PURE_DECLS \
+#define AlienEscape_Source_AlienEscape_AlienEscapePlatform_h_15_SPARSE_DATA
+#define AlienEscape_Source_AlienEscape_AlienEscapePlatform_h_15_RPC_WRAPPERS
+#define AlienEscape_Source_AlienEscape_AlienEscapePlatform_h_15_RPC_WRAPPERS_NO_PURE_DECLS
+#define AlienEscape_Source_AlienEscape_AlienEscapePlatform_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAAlienEscapePlatform(); \
 	friend struct Z_Construct_UClass_AAlienEscapePlatform_Statics; \
 public: \
-	DECLARE_CLASS(AAlienEscapePlatform, AActor, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/AlienEscape"), NO_API) \
+	DECLARE_CLASS(AAlienEscapePlatform, APoolableActor, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/AlienEscape"), NO_API) \
 	DECLARE_SERIALIZER(AAlienEscapePlatform)
 
 
-#define AlienEscape_Source_AlienEscape_AlienEscapePlatform_h_12_INCLASS \
+#define AlienEscape_Source_AlienEscape_AlienEscapePlatform_h_15_INCLASS \
 private: \
 	static void StaticRegisterNativesAAlienEscapePlatform(); \
 	friend struct Z_Construct_UClass_AAlienEscapePlatform_Statics; \
 public: \
-	DECLARE_CLASS(AAlienEscapePlatform, AActor, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/AlienEscape"), NO_API) \
+	DECLARE_CLASS(AAlienEscapePlatform, APoolableActor, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/AlienEscape"), NO_API) \
 	DECLARE_SERIALIZER(AAlienEscapePlatform)
 
 
-#define AlienEscape_Source_AlienEscape_AlienEscapePlatform_h_12_STANDARD_CONSTRUCTORS \
+#define AlienEscape_Source_AlienEscape_AlienEscapePlatform_h_15_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AAlienEscapePlatform(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AAlienEscapePlatform) \
@@ -47,7 +47,7 @@ private: \
 public:
 
 
-#define AlienEscape_Source_AlienEscape_AlienEscapePlatform_h_12_ENHANCED_CONSTRUCTORS \
+#define AlienEscape_Source_AlienEscape_AlienEscapePlatform_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AAlienEscapePlatform(AAlienEscapePlatform&&); \
@@ -58,28 +58,28 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AAlienEscapePlatform)
 
 
-#define AlienEscape_Source_AlienEscape_AlienEscapePlatform_h_12_PRIVATE_PROPERTY_OFFSET
-#define AlienEscape_Source_AlienEscape_AlienEscapePlatform_h_9_PROLOG
-#define AlienEscape_Source_AlienEscape_AlienEscapePlatform_h_12_GENERATED_BODY_LEGACY \
+#define AlienEscape_Source_AlienEscape_AlienEscapePlatform_h_15_PRIVATE_PROPERTY_OFFSET
+#define AlienEscape_Source_AlienEscape_AlienEscapePlatform_h_12_PROLOG
+#define AlienEscape_Source_AlienEscape_AlienEscapePlatform_h_15_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	AlienEscape_Source_AlienEscape_AlienEscapePlatform_h_12_PRIVATE_PROPERTY_OFFSET \
-	AlienEscape_Source_AlienEscape_AlienEscapePlatform_h_12_SPARSE_DATA \
-	AlienEscape_Source_AlienEscape_AlienEscapePlatform_h_12_RPC_WRAPPERS \
-	AlienEscape_Source_AlienEscape_AlienEscapePlatform_h_12_INCLASS \
-	AlienEscape_Source_AlienEscape_AlienEscapePlatform_h_12_STANDARD_CONSTRUCTORS \
+	AlienEscape_Source_AlienEscape_AlienEscapePlatform_h_15_PRIVATE_PROPERTY_OFFSET \
+	AlienEscape_Source_AlienEscape_AlienEscapePlatform_h_15_SPARSE_DATA \
+	AlienEscape_Source_AlienEscape_AlienEscapePlatform_h_15_RPC_WRAPPERS \
+	AlienEscape_Source_AlienEscape_AlienEscapePlatform_h_15_INCLASS \
+	AlienEscape_Source_AlienEscape_AlienEscapePlatform_h_15_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define AlienEscape_Source_AlienEscape_AlienEscapePlatform_h_12_GENERATED_BODY \
+#define AlienEscape_Source_AlienEscape_AlienEscapePlatform_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	AlienEscape_Source_AlienEscape_AlienEscapePlatform_h_12_PRIVATE_PROPERTY_OFFSET \
-	AlienEscape_Source_AlienEscape_AlienEscapePlatform_h_12_SPARSE_DATA \
-	AlienEscape_Source_AlienEscape_AlienEscapePlatform_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
-	AlienEscape_Source_AlienEscape_AlienEscapePlatform_h_12_INCLASS_NO_PURE_DECLS \
-	AlienEscape_Source_AlienEscape_AlienEscapePlatform_h_12_ENHANCED_CONSTRUCTORS \
+	AlienEscape_Source_AlienEscape_AlienEscapePlatform_h_15_PRIVATE_PROPERTY_OFFSET \
+	AlienEscape_Source_AlienEscape_AlienEscapePlatform_h_15_SPARSE_DATA \
+	AlienEscape_Source_AlienEscape_AlienEscapePlatform_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+	AlienEscape_Source_AlienEscape_AlienEscapePlatform_h_15_INCLASS_NO_PURE_DECLS \
+	AlienEscape_Source_AlienEscape_AlienEscapePlatform_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

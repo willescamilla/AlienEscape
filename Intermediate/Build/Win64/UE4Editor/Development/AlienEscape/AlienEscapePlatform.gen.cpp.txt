@@ -2,4 +2,10 @@ C:\UnrealProjects\AlienEscape\Intermediate\Build\Win64\UE4Editor\Development\Ali
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
 C:\UnrealProjects\AlienEscape\Source\AlienEscape/AlienEscapePlatform.h
+C:\UnrealProjects\AlienEscape\Source\AlienEscape\PoolableActor.h
+C:\UnrealProjects\AlienEscape\Intermediate\Build\Win64\UE4Editor\Inc\AlienEscape\PoolableActor.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Plugins\2D\Paper2D\Source\Paper2D\Classes\PaperSpriteComponent.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Plugins\2D\Paper2D\Intermediate\Build\Win64\UE4Editor\Inc\Paper2D\PaperSpriteComponent.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/MovementComponent.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\MovementComponent.generated.h
 C:\UnrealProjects\AlienEscape\Intermediate\Build\Win64\UE4Editor\Inc\AlienEscape\AlienEscapePlatform.generated.h
