@@ -78,7 +78,7 @@ AAlienEscapeCharacter::AAlienEscapeCharacter()
 void AAlienEscapeCharacter::Tick(float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
-	AddMovementInput(FVector(1.0f, 0.0f, 0.0f), 0.5);
+	AddMovementInput(FVector(0.8f, 0.0f, 0.0f), 0.5);
 	UpdateCharacter();
 }
 

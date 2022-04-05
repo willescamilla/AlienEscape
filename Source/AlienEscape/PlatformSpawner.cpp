@@ -26,7 +26,7 @@ void APlatformSpawner::BeginPlay()
 
 void APlatformSpawner::SpawnActor()
 {
-	if (FMath::RandRange(0, 10) > ChanceToSpawn) {
+	if (FMath::RandRange(0, 10) >= ChanceToSpawn) {
 		APoolableActor* PoolableActor = ObjectPooler->GetPooledActor();
 		if (PoolableActor == nullptr) {
 			UE_LOG(LogTemp, Warning, TEXT("Cannot Spawn Platform"));
