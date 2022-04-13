@@ -52,7 +52,7 @@ void AAlienEscapePlatform::BeginPlay()
 void AAlienEscapePlatform::Tick(float DeltaTime)
 {
     Super::Tick(DeltaTime);
-    SetActorLocation(GetActorLocation() + FVector(-2.0, 0.0, 0.0));
+    //SetActorLocation(GetActorLocation() + FVector(-2.0, 0.0, 0.0));
 }
 
 

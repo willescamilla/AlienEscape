@@ -4,27 +4,28 @@
 #include "PlatformSpawner.h"
 #include "Components/BoxComponent.h"
 #include "TimerManager.h"
+#include "Engine.h"
 #include "Math/UnrealMathUtility.h"
 
 // Sets default values
-APlatformSpawner::APlatformSpawner()
+UPlatformSpawner::UPlatformSpawner()
 {
-	RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("DefaultSceneRoot"));
-	SpawnVolume = CreateDefaultSubobject<UBoxComponent>(TEXT("SpawnVolume"));
-	SpawnVolume->AttachToComponent(RootComponent, FAttachmentTransformRules::KeepRelativeTransform);
+	//RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("DefaultSceneRoot"));
+	//SpawnVolume = CreateDefaultSubobject<UBoxComponent>(TEXT("SpawnVolume"));
+	//SpawnVolume->AttachToComponent(RootComponent, FAttachmentTransformRules::KeepRelativeTransform);
 
 	ObjectPooler = CreateDefaultSubobject<UObjectPool>(TEXT("ObjectPooler"));
 }
 
 // Called when the game starts or when spawned
-void APlatformSpawner::BeginPlay()
+void UPlatformSpawner::BeginPlay()
 {
 	Super::BeginPlay();
-
-	GetWorldTimerManager().SetTimer(SpawnTimerHandle, this, &APlatformSpawner::SpawnActor, SpawnCooldown, true, InitialSpawnDelay);
+	UWorld* const World = GetWorld();
+	World->GetTimerManager().SetTimer(SpawnTimerHandle, this, &UPlatformSpawner::SpawnActor, SpawnCooldown, true, InitialSpawnDelay);
 }
 
-void APlatformSpawner::SpawnActor()
+void UPlatformSpawner::SpawnActor()
 {
 	if (FMath::RandRange(0, 10) >= ChanceToSpawn) {
 		APoolableActor* PoolableActor = ObjectPooler->GetPooledActor();
@@ -32,8 +33,8 @@ void APlatformSpawner::SpawnActor()
 			UE_LOG(LogTemp, Warning, TEXT("Cannot Spawn Platform"));
 		}
 
-		PoolableActor->SetActorLocation(GetActorLocation());
-		PoolableActor->SetActorRotation(GetActorRotation());
+		PoolableActor->SetActorLocation(GetComponentLocation());
+		PoolableActor->SetActorRotation(GetComponentRotation());
 		PoolableActor->SetActive(true);
 		UE_LOG(LogTemp, Warning, TEXT("Spawning Platform"));
 	}

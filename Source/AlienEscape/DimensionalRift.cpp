@@ -20,8 +20,6 @@ void ADimensionalRift::BeginPlay()
 {
     Super::BeginPlay();
 
-    DrawDebugBox(GetWorld(), GetActorLocation(), GetActorScale() * 10, FColor::Cyan, true, -1, 0, 5);
-
 }
 
 void ADimensionalRift::OnOverlapBegin(class AActor* OverlappedActor, class AActor* OtherActor)
@@ -39,11 +37,13 @@ void ADimensionalRift::OnOverlapBegin(class AActor* OverlappedActor, class AActo
 
 void ADimensionalRift::OnOverlapEnd(class AActor* OverlappedActor, class AActor* OtherActor)
 {
+    //DrawDebugBox(GetWorld(), GetActorLocation(), GetActorScale() * 10, FColor::Cyan, true, -1, 0, 5);
     if (OtherActor && (OtherActor != this)) {
  
         if (dynamic_cast<APoolableActor*>(OtherActor) != nullptr) {
             // Cast OtherActor into an object that can be added back to the pool
             APoolableActor* ObjectInPool = dynamic_cast<APoolableActor*>(OtherActor);
+            //printFString("Deactivating: s", *OtherActor->GetName());
             ObjectInPool->Deactivate();
         }
         else {

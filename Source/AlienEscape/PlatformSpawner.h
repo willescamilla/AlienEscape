@@ -6,17 +6,18 @@
 #include "AlienEscapePlatform.h"
 #include "ObjectPool.h"
 #include "CoreMinimal.h"
+#include "Components/SceneComponent.h"
 #include "GameFramework/Actor.h"
 #include "PlatformSpawner.generated.h"
 
 UCLASS()
-class ALIENESCAPE_API APlatformSpawner : public AActor
+class ALIENESCAPE_API UPlatformSpawner : public USceneComponent
 {
 	GENERATED_BODY()
 	
 public:	
 	// Sets default values for this actor's properties
-	APlatformSpawner();
+	UPlatformSpawner();
 
 	UFUNCTION()
 		void SpawnActor();

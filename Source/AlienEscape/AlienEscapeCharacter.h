@@ -2,8 +2,10 @@
 
 #pragma once
 
+#include "GameFramework/Actor.h"
 #include "CoreMinimal.h"
 #include "PaperCharacter.h"
+#include "Components/SceneComponent.h"
 #include "AlienEscapeCharacter.generated.h"
 
 class UTextRenderComponent;
@@ -29,6 +31,17 @@ class AAlienEscapeCharacter : public APaperCharacter
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
 		class USpringArmComponent *CameraBoom;
 
+	/** Spring Arm for Spawners */
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Spawner, meta = (AllowPrivateAccess = "true"))
+		class USpringArmComponent* SpringPlatformBottom;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Spawner, meta = (AllowPrivateAccess = "true"))
+		class USpringArmComponent* SpringPlatformMiddle;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Spawner, meta = (AllowPrivateAccess = "true"))
+		class USpringArmComponent* SpringPlatformTop;
+
+
 	UTextRenderComponent *TextComponent;
 	virtual void Tick(float DeltaSeconds) override;
 
@@ -41,6 +54,19 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
 		class UPaperFlipbook *IdleAnimation;
 
+	/** Spawner components */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Spawner, meta = (AllowPrivateAccess = "true"))
+		class USceneComponent* PlatformSpawnerBottom;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Spawner, meta = (AllowPrivateAccess = "true"))
+		class USceneComponent* PlatformSpawnerMiddle;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Spawner, meta = (AllowPrivateAccess = "true"))
+		class USceneComponent* PlatformSpawnerTop;
+
+	/* Ensures the Z location of the Spawners stays constant*/
+	void UpdateSpringArms();
+
 	/* Updates the animation and rotation of character*/
 	void UpdateCharacter();
 
@@ -52,6 +78,15 @@ protected:
 
 	/** Handle touch stop event. */
 	void TouchStopped(const ETouchIndex::Type FingerIndex, const FVector Location);
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Spawner)
+		float bottomPlatformSpawnerZ = -384;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Spawner)
+		float middlePlatformSpawnerZ = -84;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Spawner)
+		float topPlatformSpawnerZ = 216;
 
 	// APawn interface
 	virtual void SetupPlayerInputComponent(class UInputComponent *InputComponent) override;

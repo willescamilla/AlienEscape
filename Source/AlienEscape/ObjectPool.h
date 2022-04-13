@@ -4,14 +4,13 @@
 
 #include "PoolableActor.h"
 #include "AlienEscapePlatform.h"
-
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
+#include "Components/SceneComponent.h"
 #include "ObjectPool.generated.h"
 
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
-class ALIENESCAPE_API UObjectPool : public UActorComponent
+class ALIENESCAPE_API UObjectPool : public USceneComponent
 {
 	GENERATED_BODY()
 
@@ -32,7 +31,7 @@ public:
 		TSubclassOf<class APoolableActor> PooledActorSubclass;
 
 	UPROPERTY(EditAnywhere, Category = "ObjectPooler")
-		int PoolSize = 50;
+		int PoolSize = 100;
 
 	TArray<APoolableActor*> Pool;
 };

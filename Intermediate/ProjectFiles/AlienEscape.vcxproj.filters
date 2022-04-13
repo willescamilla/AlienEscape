@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\AlienEscape.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{FC55740B-F23F-4D1B-AB30-1311F38584BA}</UniqueIdentifier>
+      <UniqueIdentifier>{2CDD0F45-91A5-44C0-A4C7-C6213DF3D50C}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\AlienEscape.Target.cs">
       <Filter>Source</Filter>
@@ -15,7 +15,7 @@
     <None Include="..\..\.gitignore" />
     <None Include="..\..\AlienEscape.code-workspace" />
     <Filter Include="Config">
-      <UniqueIdentifier>{9A9A5497-FE8C-4B22-AD5F-B26D92B73379}</UniqueIdentifier>
+      <UniqueIdentifier>{5918D1B9-A581-4624-B14E-C36FD1D85D0F}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -33,7 +33,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\AlienEscape">
-      <UniqueIdentifier>{D6F77003-DBAA-45D8-9F5E-C953D85E99AD}</UniqueIdentifier>
+      <UniqueIdentifier>{57D73C6B-378B-45DB-B3E1-F041E5D6132C}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\AlienEscape\AlienEscape.Build.cs">
       <Filter>Source\AlienEscape</Filter>
@@ -84,6 +84,12 @@
       <Filter>Source\AlienEscape</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\AlienEscape\PoolableActor.h">
+      <Filter>Source\AlienEscape</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\AlienEscape\Powerup.cpp">
+      <Filter>Source\AlienEscape</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\AlienEscape\Powerup.h">
       <Filter>Source\AlienEscape</Filter>
     </ClInclude>
   </ItemGroup>

@@ -5,6 +5,7 @@
 #include "Components/TextRenderComponent.h"
 #include "Components/CapsuleComponent.h"
 #include "Components/InputComponent.h"
+#include "UObject/ConstructorHelpers.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/Controller.h"
@@ -42,6 +43,34 @@ AAlienEscapeCharacter::AAlienEscapeCharacter()
 	SideViewCameraComponent->OrthoWidth = 2048.0f;
 	SideViewCameraComponent->SetupAttachment(CameraBoom, USpringArmComponent::SocketName);
 
+	/* Setup platform spawner spring components */
+	SpringPlatformBottom = CreateDefaultSubobject<USpringArmComponent>(TEXT("SpringPlatformBottom"));
+	SpringPlatformBottom->SetupAttachment(RootComponent);
+	SpringPlatformBottom->TargetArmLength = -1700;
+	SpringPlatformBottom->SocketOffset = FVector(0.0f, 0.0f, 0.0f);
+	SpringPlatformBottom->SetUsingAbsoluteRotation(true);
+	SpringPlatformBottom->bDoCollisionTest = false;
+	SpringPlatformMiddle = CreateDefaultSubobject<USpringArmComponent>(TEXT("SpringPlatformMiddle"));
+	SpringPlatformMiddle->SetupAttachment(RootComponent);
+	SpringPlatformMiddle->TargetArmLength = -1700;
+	SpringPlatformMiddle->SocketOffset = FVector(0.0f, 0.0f, 0.0f);
+	SpringPlatformMiddle->SetUsingAbsoluteRotation(true);
+	SpringPlatformMiddle->bDoCollisionTest = false;
+	SpringPlatformTop = CreateDefaultSubobject<USpringArmComponent>(TEXT("SpringPlatformTop"));
+	SpringPlatformTop->SetupAttachment(RootComponent);
+	SpringPlatformTop->TargetArmLength = -1700;
+	SpringPlatformTop->SocketOffset = FVector(0.0f, 0.0f, 0.0f);
+	SpringPlatformTop->SetUsingAbsoluteRotation(true);
+	SpringPlatformTop->bDoCollisionTest = false;
+	
+	/* Setup platform spawner components*/
+	PlatformSpawnerBottom = CreateDefaultSubobject<USceneComponent>(TEXT("PlatformSpawnerBottom"));
+	PlatformSpawnerBottom->SetupAttachment(SpringPlatformBottom, USpringArmComponent::SocketName);
+	PlatformSpawnerMiddle = CreateDefaultSubobject<USceneComponent>(TEXT("PlatformSpawnerMiddle"));
+	PlatformSpawnerMiddle->SetupAttachment(SpringPlatformMiddle, USpringArmComponent::SocketName);
+	PlatformSpawnerTop = CreateDefaultSubobject<USceneComponent>(TEXT("PlatformSpawnerTop"));
+	PlatformSpawnerTop->SetupAttachment(SpringPlatformTop, USpringArmComponent::SocketName);
+
 	// Prevent all automatic rotation behavior on the camera, character, and camera component
 	CameraBoom->SetUsingAbsoluteRotation(true);
 	SideViewCameraComponent->bUsePawnControlRotation = false;
@@ -78,12 +107,21 @@ AAlienEscapeCharacter::AAlienEscapeCharacter()
 void AAlienEscapeCharacter::Tick(float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
-	AddMovementInput(FVector(0.8f, 0.0f, 0.0f), 0.5);
+	AddMovementInput(FVector(1.0f, 0.0f, 0.0f), 1.0);
 	UpdateCharacter();
+	UpdateSpringArms();
 }
 
 //////////////////////////////////////////////////////////////////////////
 // Animation
+void AAlienEscapeCharacter::UpdateSpringArms()
+{
+	float characterZPosition = GetActorLocation().Z;
+	SpringPlatformBottom->SocketOffset = FVector(0.0f, 0.0f, bottomPlatformSpawnerZ-characterZPosition);
+	SpringPlatformMiddle->SocketOffset = FVector(0.0f, 0.0f, middlePlatformSpawnerZ-characterZPosition);
+	SpringPlatformTop->SocketOffset = FVector(0.0f, 0.0f, topPlatformSpawnerZ-characterZPosition);
+}
+
 
 void AAlienEscapeCharacter::UpdateCharacter()
 {
@@ -146,7 +184,7 @@ void AAlienEscapeCharacter::MoveRight(float Value)
 	/*UpdateChar();*/
 
 	// Apply the input to the character motion
-	AddMovementInput(FVector(1.0f, 0.0f, 0.0f), Value);
+	//AddMovementInput(FVector(1.0f, 0.0f, 0.0f), Value);
 }
 
 void AAlienEscapeCharacter::FlipGravity()
@@ -187,11 +225,11 @@ void AAlienEscapeCharacter::UseSpecialAbility()
 void AAlienEscapeCharacter::TouchStarted(const ETouchIndex::Type FingerIndex, const FVector Location)
 {
 	// Jump on any touch
-	Jump();
+	//Jump();
 }
 
 void AAlienEscapeCharacter::TouchStopped(const ETouchIndex::Type FingerIndex, const FVector Location)
 {
 	// Cease jumping once touch stopped
-	StopJumping();
+	//StopJumping();
 }
