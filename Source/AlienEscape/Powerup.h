@@ -3,14 +3,14 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "PoolableActor.h"
+#include "InteractableObjects.h"
 #include "Powerup.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class ALIENESCAPE_API APowerup : public APoolableActor
+class ALIENESCAPE_API APowerup : public AInteractableObjects
 {
 	GENERATED_BODY()
 	

@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\AlienEscape.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{06AB0EF6-315A-447E-AC7B-AB12B66DC506}</UniqueIdentifier>
+      <UniqueIdentifier>{4C54B8F1-2836-49A9-BEBF-7C45193F5120}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\AlienEscape.Target.cs">
       <Filter>Source</Filter>
@@ -15,7 +15,7 @@
     <None Include="..\..\.gitignore" />
     <None Include="..\..\AlienEscape.code-workspace" />
     <Filter Include="Config">
-      <UniqueIdentifier>{8410D80D-BAD8-4788-806A-E0DCDA0A7719}</UniqueIdentifier>
+      <UniqueIdentifier>{7054B9D8-F9F4-4BEB-B6E0-0EA18BF72B83}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -33,7 +33,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\AlienEscape">
-      <UniqueIdentifier>{426D6217-6FA3-463E-92BA-5D5A687535E8}</UniqueIdentifier>
+      <UniqueIdentifier>{492EEB01-05A2-4264-854E-CE331DA8C63B}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\AlienEscape\AlienEscape.Build.cs">
       <Filter>Source\AlienEscape</Filter>
@@ -68,6 +68,24 @@
     <ClInclude Include="..\..\Source\AlienEscape\DimensionalRift.h">
       <Filter>Source\AlienEscape</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\AlienEscape\InteractableObjects.cpp">
+      <Filter>Source\AlienEscape</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\AlienEscape\InteractableObjects.h">
+      <Filter>Source\AlienEscape</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\AlienEscape\Lazer.cpp">
+      <Filter>Source\AlienEscape</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\AlienEscape\Lazer.h">
+      <Filter>Source\AlienEscape</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\AlienEscape\Missile.cpp">
+      <Filter>Source\AlienEscape</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\AlienEscape\Missile.h">
+      <Filter>Source\AlienEscape</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\AlienEscape\ObjectPool.cpp">
       <Filter>Source\AlienEscape</Filter>
     </ClCompile>
@@ -99,7 +117,7 @@
       <Filter>Source\AlienEscape</Filter>
     </ClInclude>
     <Filter Include="Source\AlienEscape\.vs">
-      <UniqueIdentifier>{612A853E-EEA8-4831-A6A8-78E2A7B3148C}</UniqueIdentifier>
+      <UniqueIdentifier>{9BE255A0-963F-496D-8E49-578584F7A6A9}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\AlienEscape\.vs\ProjectSettings.json">
       <Filter>Source\AlienEscape\.vs</Filter>
@@ -111,10 +129,10 @@
       <Filter>Source\AlienEscape\.vs</Filter>
     </None>
     <Filter Include="Source\AlienEscape\.vs\AlienEscape">
-      <UniqueIdentifier>{35EF5BA7-7BF8-4462-BFE4-3D3A87C4F304}</UniqueIdentifier>
+      <UniqueIdentifier>{B7A576F7-DFE3-4D2B-9736-BC65689A9E7A}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source\AlienEscape\.vs\AlienEscape\v17">
-      <UniqueIdentifier>{4E36A34F-0ED9-4A3E-BA60-C832B3C3EE44}</UniqueIdentifier>
+      <UniqueIdentifier>{1F9F02D6-6215-46C8-9FE8-5866D429FF2D}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\AlienEscape\.vs\AlienEscape\v17\Browse.VC.db">
       <Filter>Source\AlienEscape\.vs\AlienEscape\v17</Filter>
