@@ -26,11 +26,11 @@ public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
-	UPROPERTY(EditAnywhere, Category = "ObjectPooler")
+	UPROPERTY(EditAnywhere, Category = "Pool Info")
 		TSubclassOf<class APoolableActor> PooledActorSubclass;
 
-	UPROPERTY(EditAnywhere, Category = "ObjectPooler")
-		int PoolSize = 100;
+	UPROPERTY(EditAnywhere, Category = "Pool Info")
+		int PoolSize = 50;
 
 	TArray<APoolableActor*> Pool;
 };
