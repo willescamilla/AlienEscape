@@ -3,18 +3,17 @@
 #pragma once
 
 #include "PoolableActor.h"
-#include "AlienEscapePlatform.h"
 #include "CoreMinimal.h"
-#include "Components/SceneComponent.h"
+#include "Components/ActorComponent.h"
 #include "ObjectPool.generated.h"
 
 
-UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
-class ALIENESCAPE_API UObjectPool : public USceneComponent
+UCLASS(ClassGroup = (Custom), meta = (BlueprintSpawnableComponent))
+class ALIENESCAPE_API UObjectPool : public UActorComponent
 {
 	GENERATED_BODY()
 
-public:	
+public:
 	// Sets default values for this component's properties
 	UObjectPool();
 	APoolableActor* GetPooledActor();
@@ -23,7 +22,7 @@ protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
 
-public:	
+public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 

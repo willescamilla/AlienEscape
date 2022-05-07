@@ -5,6 +5,7 @@
 #include "GameFramework/Actor.h"
 #include "CoreMinimal.h"
 #include "PaperCharacter.h"
+#include "DimensionalRift.h"
 #include "Components/SceneComponent.h"
 #include "AlienEscapeCharacter.generated.h"
 
@@ -23,49 +24,24 @@ class AAlienEscapeCharacter : public APaperCharacter
 {
 	GENERATED_BODY()
 
-	/** Side view camera */
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
-		class UCameraComponent *SideViewCameraComponent;
+		/** Side view camera */
+		UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
+		class UCameraComponent* SideViewCameraComponent;
 
 	/** Camera boom positioning the camera beside the character */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
-		class USpringArmComponent *CameraBoom;
+		class USpringArmComponent* CameraBoom;
 
-	/** Spring Arm for Spawners */
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Spawner, meta = (AllowPrivateAccess = "true"))
-		class USpringArmComponent* SpringPlatformBottom;
-
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Spawner, meta = (AllowPrivateAccess = "true"))
-		class USpringArmComponent* SpringPlatformMiddle;
-
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Spawner, meta = (AllowPrivateAccess = "true"))
-		class USpringArmComponent* SpringPlatformTop;
-
-
-	UTextRenderComponent *TextComponent;
 	virtual void Tick(float DeltaSeconds) override;
 
 protected:
 	// The animation to play while running around
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
-		class UPaperFlipbook *RunningAnimation;
+		class UPaperFlipbook* RunningAnimation;
 
 	// The animation to play while idle (standing still)
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
-		class UPaperFlipbook *IdleAnimation;
-
-	/** Spawner components */
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Spawner, meta = (AllowPrivateAccess = "true"))
-		class USceneComponent* PlatformSpawnerBottom;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Spawner, meta = (AllowPrivateAccess = "true"))
-		class USceneComponent* PlatformSpawnerMiddle;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Spawner, meta = (AllowPrivateAccess = "true"))
-		class USceneComponent* PlatformSpawnerTop;
-
-	/* Ensures the Z location of the Spawners stays constant*/
-	void UpdateSpringArms();
+		class UPaperFlipbook* IdleAnimation;
 
 	/* Updates the animation and rotation of character*/
 	void UpdateCharacter();
@@ -79,19 +55,9 @@ protected:
 	/** Handle touch stop event. */
 	void TouchStopped(const ETouchIndex::Type FingerIndex, const FVector Location);
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Spawner)
-		float bottomPlatformSpawnerZ = -384;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Spawner)
-		float middlePlatformSpawnerZ = -84;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Spawner)
-		float topPlatformSpawnerZ = 216;
-
 	// APawn interface
-	virtual void SetupPlayerInputComponent(class UInputComponent *InputComponent) override;
+	virtual void SetupPlayerInputComponent(class UInputComponent* InputComponent) override;
 	// End of APawn interface
-
 
 	// Functions I made
 	/** Handles player input */
@@ -106,7 +72,7 @@ public:
 	AAlienEscapeCharacter();
 
 	/** Returns SideViewCameraComponent subobject **/
-	FORCEINLINE class UCameraComponent *GetSideViewCameraComponent() const { return SideViewCameraComponent; }
+	FORCEINLINE class UCameraComponent* GetSideViewCameraComponent() const { return SideViewCameraComponent; }
 	/** Returns CameraBoom subobject **/
-	FORCEINLINE class USpringArmComponent *GetCameraBoom() const { return CameraBoom; }
+	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
 };

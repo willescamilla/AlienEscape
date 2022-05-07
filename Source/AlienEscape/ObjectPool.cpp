@@ -37,24 +37,13 @@ void UObjectPool::BeginPlay()
 
 			// For some reason this for loop is adding PoolSize*2!
 			for (int i = 0; i < PoolSize; i++) {
-				APoolableActor* PoolableActor = World->SpawnActor<AAlienEscapePlatform>(PooledActorSubclass, FVector().ZeroVector, FRotator().ZeroRotator);
+				APoolableActor* PoolableActor = World->SpawnActor<APoolableActor>(PooledActorSubclass, FVector().ZeroVector, FRotator().ZeroRotator);
 				PoolableActor->SetActive(false);
 				Pool.Add(PoolableActor);
-				UE_LOG(LogTemp, Warning, TEXT("Added platform to the pool"));
+				UE_LOG(LogTemp, Warning, TEXT("Added object to the pool"));
 			}
-
-			// Would fill the rest of the pool with a different PoolableActor
-			/*
-			for (int i = 0; i < PoolSize / 2; i++) {
-				APoolableActor* PoolableActor = World->SpawnActor<**INSERT_OTHER_POOLABLE_ACTOR_HERE**>(PooledActorSubclass, FVector().ZeroVector, FRotator().ZeroRotator);
-				PoolableActor->SetActive(false);
-				Pool.Add(PoolableActor);
-				UE_LOG(LogTemp, Warning, TEXT("Added platform to the pool"));
-			} */
 		}
 	}
-	// ...
-	
 }
 
 
@@ -65,4 +54,3 @@ void UObjectPool::TickComponent(float DeltaTime, ELevelTick TickType, FActorComp
 
 	// ...
 }
-
