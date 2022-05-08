@@ -74,18 +74,6 @@
     <ClInclude Include="..\..\Source\AlienEscape\InteractableObjects.h">
       <Filter>Source\AlienEscape</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\AlienEscape\Lazer.cpp">
-      <Filter>Source\AlienEscape</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\AlienEscape\Lazer.h">
-      <Filter>Source\AlienEscape</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\AlienEscape\Missile.cpp">
-      <Filter>Source\AlienEscape</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\AlienEscape\Missile.h">
-      <Filter>Source\AlienEscape</Filter>
-    </ClInclude>
     <ClCompile Include="..\..\Source\AlienEscape\ObjectPool.cpp">
       <Filter>Source\AlienEscape</Filter>
     </ClCompile>
@@ -102,12 +90,6 @@
       <Filter>Source\AlienEscape</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\AlienEscape\PoolableActor.h">
-      <Filter>Source\AlienEscape</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\AlienEscape\Powerup.cpp">
-      <Filter>Source\AlienEscape</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\AlienEscape\Powerup.h">
       <Filter>Source\AlienEscape</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\AlienEscape\SpawnersContainer.cpp">

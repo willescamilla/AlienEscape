@@ -2,6 +2,7 @@
 
 
 #include "ObjectPool.h"
+#include "InteractableObjects.h"
 #include "UObject/ConstructorHelpers.h"
 #include "GameFramework/Actor.h"
 #include "Engine.h"
@@ -34,7 +35,6 @@ void UObjectPool::BeginPlay()
 	if (PooledActorSubclass != NULL) {
 		UWorld* const World = GetWorld();
 		if (World) {
-
 			// For some reason this for loop is adding PoolSize*2!
 			for (int i = 0; i < PoolSize; i++) {
 				APoolableActor* PoolableActor = World->SpawnActor<APoolableActor>(PooledActorSubclass, FVector().ZeroVector, FRotator().ZeroRotator);
