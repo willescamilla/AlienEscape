@@ -45,7 +45,7 @@ void UObjectSpawner::SpawnActor()
 			PoolableActor->SetActorLocation(GetComponentLocation());
 			PoolableActor->SetActorRotation(GetComponentRotation());
 			PoolableActor->SetActive(true);
-			UE_LOG(LogTemp, Warning, TEXT("Spawning Object"));
+			//UE_LOG(LogTemp, Warning, TEXT("Spawning Object"));
 		}
 	}
 }
