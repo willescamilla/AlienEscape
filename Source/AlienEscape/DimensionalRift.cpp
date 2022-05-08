@@ -24,15 +24,7 @@ void ADimensionalRift::BeginPlay()
 
 void ADimensionalRift::OnOverlapBegin(class AActor* OverlappedActor, class AActor* OtherActor)
 {
-    if (OtherActor && (OtherActor != this)) {
-        if (dynamic_cast<APoolableActor*>(OtherActor) != nullptr) {
-            //printFString("%s IS a poolable object", *OtherActor->GetName());
-        }
-        else {
-            printFString("%s IS NOT a poolable object", *OtherActor->GetName());
-        }
-        
-    }
+    
 }
 
 void ADimensionalRift::OnOverlapEnd(class AActor* OverlappedActor, class AActor* OtherActor)
@@ -41,6 +33,7 @@ void ADimensionalRift::OnOverlapEnd(class AActor* OverlappedActor, class AActor*
     if (OtherActor && (OtherActor != this)) {
  
         if (dynamic_cast<APoolableActor*>(OtherActor) != nullptr) {
+            //printFString("%s IS a poolable object", *OtherActor->GetName());
             // Cast OtherActor into an object that can be added back to the pool
             APoolableActor* ObjectInPool = dynamic_cast<APoolableActor*>(OtherActor);
             //printFString("Deactivating: s", *OtherActor->GetName());
@@ -48,6 +41,7 @@ void ADimensionalRift::OnOverlapEnd(class AActor* OverlappedActor, class AActor*
         }
         else {
             // Something went through the rift that isn't part of the pool
+            printFString("%s IS NOT a poolable object", *OtherActor->GetName());
         }
         
     }

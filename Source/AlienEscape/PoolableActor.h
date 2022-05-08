@@ -17,7 +17,9 @@ public:
 
 	void SetActive(bool InActive);
 	bool IsActive();
-	void Deactivate();
+
+	UFUNCTION(BluePrintCallable)
+		void Deactivate();
 
 
 protected:

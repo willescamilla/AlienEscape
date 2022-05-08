@@ -71,7 +71,7 @@ void EmptyLinkFunctionForGeneratedCodeAlienEscapePlatform() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AAlienEscapePlatform, 663542943);
+	IMPLEMENT_CLASS(AAlienEscapePlatform, 1178085820);
 	template<> ALIENESCAPE_API UClass* StaticClass<AAlienEscapePlatform>()
 	{
 		return AAlienEscapePlatform::StaticClass();
