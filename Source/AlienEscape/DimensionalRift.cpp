@@ -41,7 +41,7 @@ void ADimensionalRift::OnOverlapEnd(class AActor* OverlappedActor, class AActor*
         }
         else {
             // Something went through the rift that isn't part of the pool
-            printFString("%s IS NOT a poolable object", *OtherActor->GetName());
+            //printFString("%s IS NOT a poolable object", *OtherActor->GetName());
         }
         
     }
