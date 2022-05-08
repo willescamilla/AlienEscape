@@ -16,6 +16,8 @@ public:
 	APoolableActor();
 
 	void SetActive(bool InActive);
+
+	UFUNCTION(BluePrintCallable)
 	bool IsActive();
 
 	UFUNCTION(BluePrintCallable)
